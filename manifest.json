@@ -2,18 +2,18 @@
 
     "manifest_version": 2,
     "name": "YoutubeSwitch",
-    "version": "1.1",
+    "version": "1.1.2",
 
     "description": "Removes part of youtube for non distraction view.",
     "permissions": [
       "storage"
     ],
     "icons": {
-      "48": "assets/logo.png"
+      "250": "assets/logo.png"
     },
     "browser_action": {
         "default_icon": {
-          "500": "assets/logo.png"
+          "250": "assets/logo.png"
         },
         "default_title": "YouTube Switch",
         "default_popup": "popup.html"
