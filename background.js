@@ -1,11 +1,15 @@
-console.log('Extension Enabled')
-// browser.runtime.onMessage.addListener((message, sender, sendResponse) => {
-//     console.log("Message from the background script:");
-//     console.log(message);
-//     browser.storage.local.set({ 'YoutubeSwitchHideSidebar': message });
-//     browser.storage.local.get('YoutubeSwitchHideSidebar').then((data, error) => {
-//         console.log("data");
-//         console.log(data, error);
-//     })
-//     console.log("background.js");
-// });
+// console.log('Extension Enabled')
+// storage.local()
+browser.runtime.onMessage.addListener(function (message){
+    console.log("Message from the background script:");
+    console.log(message,typeof message);
+    browser.storage.local.set(message).then(setItem, onError);
+    console.log("Finished command")
+    browser.storage.local.get("HideRecommend").then(function (value){console.log(value)}, onError)
+});
+function onError(error) {
+    console.log(error)
+}
+function setItem() {
+    console.log('Item set succefuly')
+}

@@ -6,7 +6,8 @@
 
     "description": "Removes part of youtube for non distraction view.",
     "permissions": [
-      "storage"
+      "storage",
+      "activeTab"
     ],
     "icons": {
       "250": "assets/logo.png"
